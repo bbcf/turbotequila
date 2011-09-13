@@ -1,0 +1,4 @@
+recursive-include turbotequila/public *
+include turbotequila/public/favicon.ico
+recursive-include turbotequila/i18n *
+recursive-include turbotequila/templates *
