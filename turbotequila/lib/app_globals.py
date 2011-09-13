@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """The application's Globals object"""
-
+from turbotequila.websetup.bootstrap import group_admins, group_users, perm_admin, perm_user
 __all__ = ['Globals']
 
 
@@ -24,7 +24,7 @@ class Globals(object):
         '''
         Default groups and permissions
         '''
-        self.group_admins = 'Admins'
-        self.group_users = 'Users'
-        self.perm_read = 'read'
-        self.perm_admin = 'admin'
+        self.group_admins = group_admins
+        self.group_users = group_users
+        self.perm_user = perm_user
+        self.perm_admin = perm_admin

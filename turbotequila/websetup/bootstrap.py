@@ -6,6 +6,12 @@ from sqlalchemy.exc import IntegrityError
 import transaction
 from tg import app_globals as gl
 
+group_admins = 'Admins'
+perm_admin = 'admin'
+
+group_users = 'Users'
+perm_user = 'user'
+
 def bootstrap(command, conf, vars):
     """Place any commands to setup turbotequila here.
     Note that you will have to log in the application one before launching the bootstrap."""
@@ -18,27 +24,27 @@ def bootstrap(command, conf, vars):
             print 'Adding default groups and permissions'
             # ADMIN GROUP
             admins = model.Group()
-            admins.name = gl.group_admins
+            admins.name = group_admins
             admins.users.append(admin)
             model.DBSession.add(admins)
         
             # ADMIN PERMISSION
             perm = model.Permission()
-            perm.name = gl.perm_admin
+            perm.name = perm_admin
             perm.description = u'This permission give admin right to the bearer'
             perm.groups.append(admins)
             model.DBSession.add(perm)
             transaction.commit()
             
-             # ADMIN GROUP
+             # USER GROUP
             users = model.Group()
-            users.name = gl.group_users
+            users.name = group_users
             users.users.append(admin)
             model.DBSession.add(users)
             
             # READ PERMISSION
             read = model.Permission()
-            read.name = gl.perm_read
+            read.name = perm_user
             read.description = u'This permission give "read" right to the bearer'
             read.groups.append(users)
             model.DBSession.add(read)

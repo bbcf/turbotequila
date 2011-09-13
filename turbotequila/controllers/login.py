@@ -5,7 +5,7 @@ from turbotequila.lib.base import BaseController
 from turbotequila.lib import tequila
 from tg import expose,url,flash,request,response
 from tg.controllers import redirect
-from turbotequila.model import User, DBSession
+from turbotequila.model import User, Group, DBSession
 from paste.auth import auth_tkt
 from turbotequila.config.app_cfg import token
 from paste.request import resolve_relative_url
@@ -55,6 +55,8 @@ class LoginController(BaseController):
         # log or create him
         user = DBSession.query(User).filter(User.email == tmp_user.email).first()
         if not user:
+            user_group = DBSession.query(Group).filter(Group.name == gl.group_users).first()
+            user_group.users.append(tmp_user)
             DBSession.add(tmp_user)
             transaction.commit()
             user = DBSession.query(User).filter(User.email == mail).first()
@@ -63,6 +65,8 @@ class LoginController(BaseController):
         elif user.name == gl.tmp_user_name:
             user.name = tmp_user.name
             user._set_date(datetime.datetime.now())
+            user_group = DBSession.query(Group).filter(Group.name == gl.group_users).first()
+            user_group.users.append(tmp_user)
             flash( '''Your account has been created: %s'''%( user, ))
             DBSession.add(user)
             transaction.commit()
