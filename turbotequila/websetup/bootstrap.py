@@ -4,7 +4,6 @@
 from turbotequila import model
 from sqlalchemy.exc import IntegrityError
 import transaction
-from tg import app_globals as gl
 
 group_admins = 'Admins'
 perm_admin = 'admin'
@@ -16,9 +15,16 @@ def bootstrap(command, conf, vars):
     """Place any commands to setup turbotequila here.
     Note that you will have to log in the application one before launching the bootstrap."""
     try:
+
+        # USER GROUP
+        users = model.Group()
+        users.name = group_users
+        model.DBSession.add(users)
+        transaction.commit()
         # admin
         #admin = model.DBSession.query(model.User).filter(model.User.email == 'your_email_on_tequila@your_university.ch').first()
         admin = model.DBSession.query(model.User).filter(model.User.email == 'yohan.jarosz@epfl.ch').first()
+
 
         if admin:
             print 'Adding default groups and permissions'
@@ -35,12 +41,6 @@ def bootstrap(command, conf, vars):
             perm.groups.append(admins)
             model.DBSession.add(perm)
             transaction.commit()
-            
-             # USER GROUP
-            users = model.Group()
-            users.name = group_users
-            users.users.append(admin)
-            model.DBSession.add(users)
             
             # READ PERMISSION
             read = model.Permission()

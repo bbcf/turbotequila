@@ -22,7 +22,7 @@ turbotequila/controllers/error.py
 turbotequila/controllers/root.py
 turbotequila/controllers/secure.py
 turbotequila/controllers/template.py
-turbotequila/i18n/ru/LC_MESSAGES/newproject.po
+turbotequila/i18n/ru/LC_MESSAGES/turbotequila.po
 turbotequila/lib/__init__.py
 turbotequila/lib/app_globals.py
 turbotequila/lib/base.py
