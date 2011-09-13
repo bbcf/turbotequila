@@ -13,7 +13,7 @@ Download the project :
 You want to use another one for your installation, so choose a name for your project (myCoolProject)
 and run the following commands :
 
-    $ find . -depth -name '*turbotequila*' -execdir rename newproject mycoolproject {} \;
+    $ find . -depth -name '*turbotequila*' -execdir rename turbotequila mycoolproject {} \;
 
 (will rename all files with 'turbotequila' by 'myCoolProject')
 
@@ -38,7 +38,7 @@ see http://www.postgresql.org/docs/ for more.
 
 Install the ``dev packages`` for postgresql, and the ``python bindings``::
     
-    $ su -c 'yum install postgresql-devel python-psycopg2
+    $ su -c 'yum install postgresql-devel python-psycopg2'
 
 Create the database and change the adress in ``turbotequila/development.ini`` under ``sqlalchemy.url``.
 
