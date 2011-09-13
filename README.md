@@ -5,20 +5,25 @@ TurboTequila is a Turbogears application with Tequila enabled.
 First use
 =====================
 Download the project :
-git clone git://github.com/bbcf/turbotequila.git.
+
+    $ git clone git://github.com/bbcf/turbotequila.git.
+
 (It will create a directory named 'turbotequila')
 
 You want to use another one for your installation, so choose a name for your project (myCoolProject)
 and run the following commands :
-find . -depth -name '*turbotequila*' -execdir rename newproject mycoolproject {} \;
+
+    $ find . -depth -name '*turbotequila*' -execdir rename newproject mycoolproject {} \;
+
 (will rename all files with 'turbotequila' by 'myCoolProject')
 
 then
 
-find . -type 'f' -name '*' -exec sed -i 's/turbotequila/mycoolproject/' {} \;
+    $ find . -type 'f' -name '*' -exec sed -i 's/turbotequila/mycoolproject/' {} \;
+
 (will rename all occurances of 'turbotequila' in all files by 'myCoolProject')
 
-WARNING : Avoid using upper case with naming your project. Just use lower case and it will be fine.
+``WARNING`` : Avoid using upper case with naming your project. Just use lower case and it will be fine.
 
 In the future, we plan to avoid this by directly provide a plugin for Turbogears and a Tequila project will
 be created by a simple command like 'paster quickstart tequila'.
@@ -54,8 +59,8 @@ While developing you may want the server to reload after changes in package file
 Then you are ready to go.
 
 
-#-----------------------------------#
-# This code was written by the BBCF #
-# http://bbcf.epfl.ch/              #
-# webmaster.bbcf@epfl.ch            #
-#-----------------------------------#
+
+ This code was written by the BBCF
+ http://bbcf.epfl.ch/              
+ webmaster.bbcf@epfl.ch            
+
