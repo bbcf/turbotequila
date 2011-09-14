@@ -16,18 +16,10 @@ def bootstrap(command, conf, vars):
     Note that you will have to log in the application one before launching the bootstrap."""
     try:
 
-        # USER GROUP
-        users = model.Group()
-        users.name = group_users
-        model.DBSession.add(users)
-        transaction.commit()
-        # admin
-        #admin = model.DBSession.query(model.User).filter(model.User.email == 'your_email_on_tequila@your_university.ch').first()
-        admin = model.DBSession.query(model.User).filter(model.User.email == 'yohan.jarosz@epfl.ch').first()
-
+        admin = model.DBSession.query(model.User).filter(model.User.email == 'your_email_on_tequila@your_university.ch').first()
 
         if admin:
-            print 'Adding default groups and permissions'
+            print 'Adding ADMIN group and permission'
             # ADMIN GROUP
             admins = model.Group()
             admins.name = group_admins
@@ -42,16 +34,19 @@ def bootstrap(command, conf, vars):
             model.DBSession.add(perm)
             transaction.commit()
             
+        else :
+            print 'Adding USER group and permission'
+            # USER GROUP
+            users = model.Group()
+            users.name = group_users
+            model.DBSession.add(users)
             # READ PERMISSION
             read = model.Permission()
             read.name = perm_user
             read.description = u'This permission give "read" right to the bearer'
             read.groups.append(users)
             model.DBSession.add(read)
-            
-        
             transaction.commit()
-        else :
             print '''
                     
                     Change email value in " turbotequila.websetup.bootstrap.py ".
