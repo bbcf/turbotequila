@@ -12,6 +12,8 @@ from paste.request import resolve_relative_url
 import transaction
 import datetime
 from tg import app_globals as gl
+import tg
+from turbotequila.lib import constants
 __all__ = ['LoginController']
 
 
@@ -50,28 +52,46 @@ class LoginController(BaseController):
         principal = tequila.validate_key(key,'tequila.epfl.ch')
         if not principal :
             redirect('/login/go')
+        # build user from tequila response
         tmp_user = self.build_user(principal)
         mail = tmp_user.email
         # log or create him
         user = DBSession.query(User).filter(User.email == tmp_user.email).first()
-        if not user:
+        if user is None:
             user_group = DBSession.query(Group).filter(Group.name == gl.group_users).first()
             user_group.users.append(tmp_user)
             DBSession.add(tmp_user)
-            transaction.commit()
+            DBSession.flush()
+
             user = DBSession.query(User).filter(User.email == mail).first()
-            flash( '''Your account has been created: %s'''%( user, ))
-            transaction.commit()
-        elif user.name == gl.tmp_user_name:
+            flash( '''Your account has been created''')
+            DBSession.flush()
+
+        elif user.name == constants.tmp_user_name:
             user.name = tmp_user.name
             user._set_date(datetime.datetime.now())
             user_group = DBSession.query(Group).filter(Group.name == gl.group_users).first()
             user_group.users.append(tmp_user)
-            flash( '''Your account has been created: %s'''%( user, ))
+            flash( '''Your account has been created''')
             DBSession.add(user)
-            transaction.commit()
-        
-        
+            DBSession.flush()
+
+        else :
+            flash( 'Welcome back', 'notice')
+
+
+
+
+        # user is logged now / look if he's an admin
+        admins = tg.config.get('admin.mails')
+        if admins is not None :
+            group_admins = DBSession.query(Group).filter(Group.id == constants.group_admins_id).first()
+            if user.email in admins:
+                user not in group_admins.users and group_admins.users.append(user)
+            else :
+                user in group_admins.users and group_admins.users.remove(user)
+            DBSession.flush()
+
         # create the authentication ticket
         user = DBSession.query(User).filter(User.email == mail).first()
         userdata=str(user.id)
@@ -105,7 +125,7 @@ class LoginController(BaseController):
         identifier = authentication_plugins['ticket']
         cookiename = identifier.cookie_name
         response.delete_cookie(cookiename)
-        redirect(url())
+        redirect('/')
     
     
     def build_user(self,principal):
@@ -120,4 +140,6 @@ class LoginController(BaseController):
             user.name = hash.get('name')
         if(hash.has_key('email')):
             user.email = hash.get('email')
+        if(hash.has_key('firstname')):
+            user.firstname = hash.get('firstname')
         return user

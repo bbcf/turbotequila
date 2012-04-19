@@ -50,10 +50,10 @@ base_config.use_toscawidgets=True
 # HOOKS
 def on_startup():
     import datetime
-    print ' --- starting application --- '+str(datetime.datetime.now())
+    print ' --- starting turbotequila application --- '+str(datetime.datetime.now())
 
 def on_shutdown():
-    print '--- stopping application --- '
+    print '--- stopping turbotequila application --- '
 base_config.call_on_startup = [on_startup]
 base_config.call_on_shutdown = [on_shutdown]
 

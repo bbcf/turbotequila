@@ -157,33 +157,8 @@ class User(DeclarativeBase):
             perms = perms | set(g.permissions)
         return perms
     
-    def permissions_for_group(self, group_id):
-        '''
-        Return permissions granted for the group.
-        '''
-        for g in self.groups:
-            if g.id == group_id :
-                return g.permissions
-        return []
-    
-    def has_access(self, permission, group_id):
-        '''
-        Return True if the user has the desired access.
-        (Alway true if the user is the creator).
-        @param permission: which permission
-        @type permission: the string representing the permission
-        @param group_id : the identifier of the group
-        @type group_id: an integer
-        '''
-        group_id = int(group_id)
-        for g in self.groups :
-            if g.id == group_id :
-                if g.creator_id == self.id :
-                    return True
-                for p in permission :
-                    if p.name == permission :
-                        return True
-        return False
+
+
     
     def __repr__(self):
         return '<User: id=%r, name=%r, email=%r, key=%r>' % (self.id, self.name, self.email,self.key)

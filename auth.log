@@ -1,0 +1,310 @@
+2012-04-19 14:36:12,973 -- repoze.who request started (/users/) --
+2012-04-19 14:36:12,973 request classification: browser
+2012-04-19 14:36:12,973 identifier plugins registered [<turbotequila.lib.auth_plugin.CustomCommandLinePlugin object at 0x10c8d2910>, <CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:12,973 identifier plugins matched for classification "browser": [<CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:12,973 identity returned from <CustomCookiePlugin 4488817808>: {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}
+2012-04-19 14:36:12,974 identities found: [(<CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'})]
+2012-04-19 14:36:12,974 authenticator plugins registered [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:12,974 authenticator plugins matched for classification "browser": [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:12,974 userid preauthenticated by <CustomCookiePlugin 4488817808>: "yohan.jarosz@epfl.ch" (repoze.who.userid set)
+2012-04-19 14:36:12,974 identities authenticated: [((0, 0), None, <CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}, 'yohan.jarosz@epfl.ch')]
+2012-04-19 14:36:12,991 User belongs to the following groups: (1, 2)
+2012-04-19 14:36:12,991 User has the following permissions: (u'admin', u'read')
+2012-04-19 14:36:13,055 Authorization granted
+2012-04-19 14:36:13,158 no challenge required
+2012-04-19 14:36:13,158 -- repoze.who request ended (/users/) --
+2012-04-19 14:36:13,198 -- repoze.who request started (/toscawidgets/resources/tw.forms/static/grid.css) --
+2012-04-19 14:36:13,199 request classification: browser
+2012-04-19 14:36:13,199 identifier plugins registered [<turbotequila.lib.auth_plugin.CustomCommandLinePlugin object at 0x10c8d2910>, <CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:13,199 identifier plugins matched for classification "browser": [<CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:13,199 identity returned from <CustomCookiePlugin 4488817808>: {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}
+2012-04-19 14:36:13,199 identities found: [(<CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'})]
+2012-04-19 14:36:13,199 authenticator plugins registered [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:13,199 authenticator plugins matched for classification "browser": [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:13,199 userid preauthenticated by <CustomCookiePlugin 4488817808>: "yohan.jarosz@epfl.ch" (repoze.who.userid set)
+2012-04-19 14:36:13,200 identities authenticated: [((0, 0), None, <CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}, 'yohan.jarosz@epfl.ch')]
+2012-04-19 14:36:13,202 -- repoze.who request started (/css/admin.css) --
+2012-04-19 14:36:13,202 request classification: browser
+2012-04-19 14:36:13,203 -- repoze.who request started (/css/style.css) --
+2012-04-19 14:36:13,203 request classification: browser
+2012-04-19 14:36:13,202 identifier plugins registered [<turbotequila.lib.auth_plugin.CustomCommandLinePlugin object at 0x10c8d2910>, <CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:13,203 identifier plugins registered [<turbotequila.lib.auth_plugin.CustomCommandLinePlugin object at 0x10c8d2910>, <CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:13,203 identifier plugins matched for classification "browser": [<CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:13,203 identifier plugins matched for classification "browser": [<CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:13,206 identity returned from <CustomCookiePlugin 4488817808>: {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}
+2012-04-19 14:36:13,207 identity returned from <CustomCookiePlugin 4488817808>: {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}
+2012-04-19 14:36:13,207 identities found: [(<CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'})]
+2012-04-19 14:36:13,207 identities found: [(<CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'})]
+2012-04-19 14:36:13,207 authenticator plugins registered [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:13,207 authenticator plugins matched for classification "browser": [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:13,207 userid preauthenticated by <CustomCookiePlugin 4488817808>: "yohan.jarosz@epfl.ch" (repoze.who.userid set)
+2012-04-19 14:36:13,208 identities authenticated: [((0, 0), None, <CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}, 'yohan.jarosz@epfl.ch')]
+2012-04-19 14:36:13,207 authenticator plugins registered [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:13,208 authenticator plugins matched for classification "browser": [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:13,209 userid preauthenticated by <CustomCookiePlugin 4488817808>: "yohan.jarosz@epfl.ch" (repoze.who.userid set)
+2012-04-19 14:36:13,209 identities authenticated: [((0, 0), None, <CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}, 'yohan.jarosz@epfl.ch')]
+2012-04-19 14:36:13,217 User belongs to the following groups: (1, 2)
+2012-04-19 14:36:13,217 User has the following permissions: (u'admin', u'read')
+2012-04-19 14:36:13,224 no challenge required
+2012-04-19 14:36:13,224 -- repoze.who request ended (/toscawidgets/resources/tw.forms/static/grid.css) --
+2012-04-19 14:36:13,231 User belongs to the following groups: (1, 2)
+2012-04-19 14:36:13,231 User has the following permissions: (u'admin', u'read')
+2012-04-19 14:36:13,232 no challenge required
+2012-04-19 14:36:13,240 User belongs to the following groups: (1, 2)
+2012-04-19 14:36:13,241 User has the following permissions: (u'admin', u'read')
+2012-04-19 14:36:13,241 no challenge required
+2012-04-19 14:36:13,241 -- repoze.who request ended (/css/style.css) --
+2012-04-19 14:36:13,242 -- repoze.who request ended (/css/admin.css) --
+2012-04-19 14:36:13,369 -- repoze.who request started (/images/pagebg.png) --
+2012-04-19 14:36:13,369 request classification: browser
+2012-04-19 14:36:13,369 identifier plugins registered [<turbotequila.lib.auth_plugin.CustomCommandLinePlugin object at 0x10c8d2910>, <CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:13,369 identifier plugins matched for classification "browser": [<CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:13,370 identity returned from <CustomCookiePlugin 4488817808>: {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}
+2012-04-19 14:36:13,370 identities found: [(<CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'})]
+2012-04-19 14:36:13,370 authenticator plugins registered [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:13,370 authenticator plugins matched for classification "browser": [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:13,370 userid preauthenticated by <CustomCookiePlugin 4488817808>: "yohan.jarosz@epfl.ch" (repoze.who.userid set)
+2012-04-19 14:36:13,370 identities authenticated: [((0, 0), None, <CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}, 'yohan.jarosz@epfl.ch')]
+2012-04-19 14:36:13,373 -- repoze.who request started (/images/menubg.png) --
+2012-04-19 14:36:13,373 request classification: browser
+2012-04-19 14:36:13,373 -- repoze.who request started (/images/headerbg.png) --
+2012-04-19 14:36:13,377 request classification: browser
+2012-04-19 14:36:13,376 -- repoze.who request started (/images/contentbg.png) --
+2012-04-19 14:36:13,377 identifier plugins registered [<turbotequila.lib.auth_plugin.CustomCommandLinePlugin object at 0x10c8d2910>, <CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:13,377 identifier plugins matched for classification "browser": [<CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:13,377 identifier plugins registered [<turbotequila.lib.auth_plugin.CustomCommandLinePlugin object at 0x10c8d2910>, <CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:13,377 request classification: browser
+2012-04-19 14:36:13,377 identity returned from <CustomCookiePlugin 4488817808>: {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}
+2012-04-19 14:36:13,378 -- repoze.who request started (/images/add.png) --
+2012-04-19 14:36:13,378 identifier plugins matched for classification "browser": [<CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:13,379 identifier plugins registered [<turbotequila.lib.auth_plugin.CustomCommandLinePlugin object at 0x10c8d2910>, <CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:13,378 identities found: [(<CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'})]
+2012-04-19 14:36:13,379 request classification: browser
+2012-04-19 14:36:13,382 identity returned from <CustomCookiePlugin 4488817808>: {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}
+2012-04-19 14:36:13,382 identifier plugins matched for classification "browser": [<CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:13,382 authenticator plugins registered [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:13,382 identifier plugins registered [<turbotequila.lib.auth_plugin.CustomCommandLinePlugin object at 0x10c8d2910>, <CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:13,382 identities found: [(<CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'})]
+2012-04-19 14:36:13,383 identity returned from <CustomCookiePlugin 4488817808>: {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}
+2012-04-19 14:36:13,383 authenticator plugins matched for classification "browser": [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:13,385 identifier plugins matched for classification "browser": [<CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:13,386 User belongs to the following groups: (1, 2)
+2012-04-19 14:36:13,386 authenticator plugins registered [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:13,386 identities found: [(<CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'})]
+2012-04-19 14:36:13,386 userid preauthenticated by <CustomCookiePlugin 4488817808>: "yohan.jarosz@epfl.ch" (repoze.who.userid set)
+2012-04-19 14:36:13,386 identity returned from <CustomCookiePlugin 4488817808>: {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}
+2012-04-19 14:36:13,386 User has the following permissions: (u'admin', u'read')
+2012-04-19 14:36:13,386 authenticator plugins matched for classification "browser": [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:13,386 authenticator plugins registered [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:13,387 identities authenticated: [((0, 0), None, <CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}, 'yohan.jarosz@epfl.ch')]
+2012-04-19 14:36:13,387 identities found: [(<CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'})]
+2012-04-19 14:36:13,389 authenticator plugins registered [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:13,387 userid preauthenticated by <CustomCookiePlugin 4488817808>: "yohan.jarosz@epfl.ch" (repoze.who.userid set)
+2012-04-19 14:36:13,389 no challenge required
+2012-04-19 14:36:13,387 authenticator plugins matched for classification "browser": [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:13,389 authenticator plugins matched for classification "browser": [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:13,389 -- repoze.who request ended (/images/pagebg.png) --
+2012-04-19 14:36:13,389 userid preauthenticated by <CustomCookiePlugin 4488817808>: "yohan.jarosz@epfl.ch" (repoze.who.userid set)
+2012-04-19 14:36:13,389 userid preauthenticated by <CustomCookiePlugin 4488817808>: "yohan.jarosz@epfl.ch" (repoze.who.userid set)
+2012-04-19 14:36:13,398 identities authenticated: [((0, 0), None, <CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}, 'yohan.jarosz@epfl.ch')]
+2012-04-19 14:36:13,389 identities authenticated: [((0, 0), None, <CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}, 'yohan.jarosz@epfl.ch')]
+2012-04-19 14:36:13,390 identities authenticated: [((0, 0), None, <CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}, 'yohan.jarosz@epfl.ch')]
+2012-04-19 14:36:13,404 User belongs to the following groups: (1, 2)
+2012-04-19 14:36:13,405 User has the following permissions: (u'admin', u'read')
+2012-04-19 14:36:13,407 no challenge required
+2012-04-19 14:36:13,408 -- repoze.who request ended (/images/headerbg.png) --
+2012-04-19 14:36:13,419 -- repoze.who request started (/images/menu-item-border.png) --
+2012-04-19 14:36:13,419 request classification: browser
+2012-04-19 14:36:13,419 identifier plugins registered [<turbotequila.lib.auth_plugin.CustomCommandLinePlugin object at 0x10c8d2910>, <CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:13,419 identifier plugins matched for classification "browser": [<CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:13,419 identity returned from <CustomCookiePlugin 4488817808>: {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}
+2012-04-19 14:36:13,419 identities found: [(<CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'})]
+2012-04-19 14:36:13,420 authenticator plugins registered [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:13,420 authenticator plugins matched for classification "browser": [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:13,420 userid preauthenticated by <CustomCookiePlugin 4488817808>: "yohan.jarosz@epfl.ch" (repoze.who.userid set)
+2012-04-19 14:36:13,420 identities authenticated: [((0, 0), None, <CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}, 'yohan.jarosz@epfl.ch')]
+2012-04-19 14:36:13,433 User belongs to the following groups: (1, 2)
+2012-04-19 14:36:13,433 User has the following permissions: (u'admin', u'read')
+2012-04-19 14:36:13,437 User belongs to the following groups: (1, 2)
+2012-04-19 14:36:13,437 User has the following permissions: (u'admin', u'read')
+2012-04-19 14:36:13,438 no challenge required
+2012-04-19 14:36:13,438 -- repoze.who request ended (/images/menubg.png) --
+2012-04-19 14:36:13,454 User belongs to the following groups: (1, 2)
+2012-04-19 14:36:13,454 User has the following permissions: (u'admin', u'read')
+2012-04-19 14:36:13,455 no challenge required
+2012-04-19 14:36:13,455 -- repoze.who request ended (/images/menu-item-border.png) --
+2012-04-19 14:36:13,456 User belongs to the following groups: (1, 2)
+2012-04-19 14:36:13,456 User has the following permissions: (u'admin', u'read')
+2012-04-19 14:36:13,456 no challenge required
+2012-04-19 14:36:13,456 -- repoze.who request ended (/images/contentbg.png) --
+2012-04-19 14:36:13,457 no challenge required
+2012-04-19 14:36:13,457 -- repoze.who request ended (/images/add.png) --
+2012-04-19 14:36:13,630 -- repoze.who request started (/images/delete.png) --
+2012-04-19 14:36:13,630 request classification: browser
+2012-04-19 14:36:13,630 identifier plugins registered [<turbotequila.lib.auth_plugin.CustomCommandLinePlugin object at 0x10c8d2910>, <CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:13,631 identifier plugins matched for classification "browser": [<CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:13,631 identity returned from <CustomCookiePlugin 4488817808>: {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}
+2012-04-19 14:36:13,631 identities found: [(<CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'})]
+2012-04-19 14:36:13,631 authenticator plugins registered [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:13,631 authenticator plugins matched for classification "browser": [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:13,631 userid preauthenticated by <CustomCookiePlugin 4488817808>: "yohan.jarosz@epfl.ch" (repoze.who.userid set)
+2012-04-19 14:36:13,631 identities authenticated: [((0, 0), None, <CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}, 'yohan.jarosz@epfl.ch')]
+2012-04-19 14:36:13,643 User belongs to the following groups: (1, 2)
+2012-04-19 14:36:13,643 User has the following permissions: (u'admin', u'read')
+2012-04-19 14:36:13,644 no challenge required
+2012-04-19 14:36:13,644 -- repoze.who request ended (/images/delete.png) --
+2012-04-19 14:36:34,570 -- repoze.who request started (/users/) --
+2012-04-19 14:36:34,570 request classification: browser
+2012-04-19 14:36:34,570 identifier plugins registered [<turbotequila.lib.auth_plugin.CustomCommandLinePlugin object at 0x10c8d2910>, <CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:34,570 identifier plugins matched for classification "browser": [<CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:34,571 identity returned from <CustomCookiePlugin 4488817808>: {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}
+2012-04-19 14:36:34,571 identities found: [(<CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'})]
+2012-04-19 14:36:34,571 authenticator plugins registered [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:34,571 authenticator plugins matched for classification "browser": [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:34,571 userid preauthenticated by <CustomCookiePlugin 4488817808>: "yohan.jarosz@epfl.ch" (repoze.who.userid set)
+2012-04-19 14:36:34,571 identities authenticated: [((0, 0), None, <CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}, 'yohan.jarosz@epfl.ch')]
+2012-04-19 14:36:34,582 User belongs to the following groups: (1, 2)
+2012-04-19 14:36:34,583 User has the following permissions: (u'admin', u'read')
+2012-04-19 14:36:34,585 Authorization granted
+2012-04-19 14:36:34,627 no challenge required
+2012-04-19 14:36:34,628 -- repoze.who request ended (/users/) --
+2012-04-19 14:36:34,664 -- repoze.who request started (/toscawidgets/resources/tw.forms/static/grid.css) --
+2012-04-19 14:36:34,665 request classification: browser
+2012-04-19 14:36:34,665 identifier plugins registered [<turbotequila.lib.auth_plugin.CustomCommandLinePlugin object at 0x10c8d2910>, <CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:34,665 identifier plugins matched for classification "browser": [<CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:34,665 identity returned from <CustomCookiePlugin 4488817808>: {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}
+2012-04-19 14:36:34,665 identities found: [(<CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'})]
+2012-04-19 14:36:34,665 authenticator plugins registered [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:34,665 authenticator plugins matched for classification "browser": [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:34,665 userid preauthenticated by <CustomCookiePlugin 4488817808>: "yohan.jarosz@epfl.ch" (repoze.who.userid set)
+2012-04-19 14:36:34,665 identities authenticated: [((0, 0), None, <CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}, 'yohan.jarosz@epfl.ch')]
+2012-04-19 14:36:34,675 -- repoze.who request started (/css/admin.css) --
+2012-04-19 14:36:34,676 -- repoze.who request started (/css/style.css) --
+2012-04-19 14:36:34,676 request classification: browser
+2012-04-19 14:36:34,679 identifier plugins registered [<turbotequila.lib.auth_plugin.CustomCommandLinePlugin object at 0x10c8d2910>, <CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:34,679 identifier plugins matched for classification "browser": [<CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:34,679 request classification: browser
+2012-04-19 14:36:34,680 identity returned from <CustomCookiePlugin 4488817808>: {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}
+2012-04-19 14:36:34,680 identifier plugins registered [<turbotequila.lib.auth_plugin.CustomCommandLinePlugin object at 0x10c8d2910>, <CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:34,680 identities found: [(<CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'})]
+2012-04-19 14:36:34,680 User belongs to the following groups: (1, 2)
+2012-04-19 14:36:34,680 identifier plugins matched for classification "browser": [<CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:34,681 authenticator plugins registered [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:34,681 User has the following permissions: (u'admin', u'read')
+2012-04-19 14:36:34,681 identity returned from <CustomCookiePlugin 4488817808>: {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}
+2012-04-19 14:36:34,681 authenticator plugins matched for classification "browser": [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:34,681 userid preauthenticated by <CustomCookiePlugin 4488817808>: "yohan.jarosz@epfl.ch" (repoze.who.userid set)
+2012-04-19 14:36:34,682 identities authenticated: [((0, 0), None, <CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}, 'yohan.jarosz@epfl.ch')]
+2012-04-19 14:36:34,682 identities found: [(<CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'})]
+2012-04-19 14:36:34,682 authenticator plugins registered [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:34,683 no challenge required
+2012-04-19 14:36:34,684 authenticator plugins matched for classification "browser": [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:34,684 userid preauthenticated by <CustomCookiePlugin 4488817808>: "yohan.jarosz@epfl.ch" (repoze.who.userid set)
+2012-04-19 14:36:34,684 identities authenticated: [((0, 0), None, <CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}, 'yohan.jarosz@epfl.ch')]
+2012-04-19 14:36:34,684 -- repoze.who request ended (/toscawidgets/resources/tw.forms/static/grid.css) --
+2012-04-19 14:36:34,696 User belongs to the following groups: (1, 2)
+2012-04-19 14:36:34,696 User has the following permissions: (u'admin', u'read')
+2012-04-19 14:36:34,705 User belongs to the following groups: (1, 2)
+2012-04-19 14:36:34,705 User has the following permissions: (u'admin', u'read')
+2012-04-19 14:36:34,706 no challenge required
+2012-04-19 14:36:34,706 -- repoze.who request ended (/css/admin.css) --
+2012-04-19 14:36:34,707 no challenge required
+2012-04-19 14:36:34,707 -- repoze.who request ended (/css/style.css) --
+2012-04-19 14:36:34,818 -- repoze.who request started (/images/pagebg.png) --
+2012-04-19 14:36:34,819 request classification: browser
+2012-04-19 14:36:34,819 identifier plugins registered [<turbotequila.lib.auth_plugin.CustomCommandLinePlugin object at 0x10c8d2910>, <CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:34,819 identifier plugins matched for classification "browser": [<CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:34,819 identity returned from <CustomCookiePlugin 4488817808>: {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}
+2012-04-19 14:36:34,819 identities found: [(<CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'})]
+2012-04-19 14:36:34,819 authenticator plugins registered [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:34,819 authenticator plugins matched for classification "browser": [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:34,819 userid preauthenticated by <CustomCookiePlugin 4488817808>: "yohan.jarosz@epfl.ch" (repoze.who.userid set)
+2012-04-19 14:36:34,819 identities authenticated: [((0, 0), None, <CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}, 'yohan.jarosz@epfl.ch')]
+2012-04-19 14:36:34,827 -- repoze.who request started (/images/contentbg.png) --
+2012-04-19 14:36:34,828 request classification: browser
+2012-04-19 14:36:34,828 -- repoze.who request started (/images/menubg.png) --
+2012-04-19 14:36:34,828 -- repoze.who request started (/images/headerbg.png) --
+2012-04-19 14:36:34,829 -- repoze.who request started (/images/add.png) --
+2012-04-19 14:36:34,829 request classification: browser
+2012-04-19 14:36:34,829 identifier plugins registered [<turbotequila.lib.auth_plugin.CustomCommandLinePlugin object at 0x10c8d2910>, <CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:34,832 request classification: browser
+2012-04-19 14:36:34,833 request classification: browser
+2012-04-19 14:36:34,833 identifier plugins matched for classification "browser": [<CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:34,833 User belongs to the following groups: (1, 2)
+2012-04-19 14:36:34,833 identifier plugins registered [<turbotequila.lib.auth_plugin.CustomCommandLinePlugin object at 0x10c8d2910>, <CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:34,833 identifier plugins registered [<turbotequila.lib.auth_plugin.CustomCommandLinePlugin object at 0x10c8d2910>, <CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:34,833 identifier plugins registered [<turbotequila.lib.auth_plugin.CustomCommandLinePlugin object at 0x10c8d2910>, <CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:34,834 identity returned from <CustomCookiePlugin 4488817808>: {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}
+2012-04-19 14:36:34,834 User has the following permissions: (u'admin', u'read')
+2012-04-19 14:36:34,834 identifier plugins matched for classification "browser": [<CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:34,834 identifier plugins matched for classification "browser": [<CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:34,834 identifier plugins matched for classification "browser": [<CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:34,834 identities found: [(<CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'})]
+2012-04-19 14:36:34,835 no challenge required
+2012-04-19 14:36:34,835 identity returned from <CustomCookiePlugin 4488817808>: {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}
+2012-04-19 14:36:34,835 identity returned from <CustomCookiePlugin 4488817808>: {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}
+2012-04-19 14:36:34,835 identity returned from <CustomCookiePlugin 4488817808>: {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}
+2012-04-19 14:36:34,836 authenticator plugins registered [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:34,836 -- repoze.who request ended (/images/pagebg.png) --
+2012-04-19 14:36:34,836 identities found: [(<CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'})]
+2012-04-19 14:36:34,836 authenticator plugins registered [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:34,836 authenticator plugins matched for classification "browser": [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:34,837 userid preauthenticated by <CustomCookiePlugin 4488817808>: "yohan.jarosz@epfl.ch" (repoze.who.userid set)
+2012-04-19 14:36:34,837 identities authenticated: [((0, 0), None, <CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}, 'yohan.jarosz@epfl.ch')]
+2012-04-19 14:36:34,836 identities found: [(<CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'})]
+2012-04-19 14:36:34,836 authenticator plugins matched for classification "browser": [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:34,836 identities found: [(<CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'})]
+2012-04-19 14:36:34,848 User belongs to the following groups: (1, 2)
+2012-04-19 14:36:34,848 -- repoze.who request started (/images/menu-item-border.png) --
+2012-04-19 14:36:34,849 request classification: browser
+2012-04-19 14:36:34,849 userid preauthenticated by <CustomCookiePlugin 4488817808>: "yohan.jarosz@epfl.ch" (repoze.who.userid set)
+2012-04-19 14:36:34,849 authenticator plugins registered [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:34,849 User has the following permissions: (u'admin', u'read')
+2012-04-19 14:36:34,848 authenticator plugins registered [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:34,849 identifier plugins registered [<turbotequila.lib.auth_plugin.CustomCommandLinePlugin object at 0x10c8d2910>, <CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:34,849 identities authenticated: [((0, 0), None, <CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}, 'yohan.jarosz@epfl.ch')]
+2012-04-19 14:36:34,849 authenticator plugins matched for classification "browser": [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:34,849 authenticator plugins matched for classification "browser": [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:34,850 identifier plugins matched for classification "browser": [<CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:34,850 userid preauthenticated by <CustomCookiePlugin 4488817808>: "yohan.jarosz@epfl.ch" (repoze.who.userid set)
+2012-04-19 14:36:34,850 userid preauthenticated by <CustomCookiePlugin 4488817808>: "yohan.jarosz@epfl.ch" (repoze.who.userid set)
+2012-04-19 14:36:34,850 identity returned from <CustomCookiePlugin 4488817808>: {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}
+2012-04-19 14:36:34,851 identities authenticated: [((0, 0), None, <CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}, 'yohan.jarosz@epfl.ch')]
+2012-04-19 14:36:34,851 identities authenticated: [((0, 0), None, <CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}, 'yohan.jarosz@epfl.ch')]
+2012-04-19 14:36:34,851 identities found: [(<CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'})]
+2012-04-19 14:36:34,852 authenticator plugins registered [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:34,853 authenticator plugins matched for classification "browser": [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:34,853 userid preauthenticated by <CustomCookiePlugin 4488817808>: "yohan.jarosz@epfl.ch" (repoze.who.userid set)
+2012-04-19 14:36:34,853 identities authenticated: [((0, 0), None, <CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}, 'yohan.jarosz@epfl.ch')]
+2012-04-19 14:36:34,852 no challenge required
+2012-04-19 14:36:34,854 -- repoze.who request ended (/images/menubg.png) --
+2012-04-19 14:36:34,881 User belongs to the following groups: (1, 2)
+2012-04-19 14:36:34,881 User has the following permissions: (u'admin', u'read')
+2012-04-19 14:36:34,883 User belongs to the following groups: (1, 2)
+2012-04-19 14:36:34,885 User has the following permissions: (u'admin', u'read')
+2012-04-19 14:36:34,888 no challenge required
+2012-04-19 14:36:34,888 -- repoze.who request ended (/images/headerbg.png) --
+2012-04-19 14:36:34,890 no challenge required
+2012-04-19 14:36:34,893 -- repoze.who request ended (/images/contentbg.png) --
+2012-04-19 14:36:34,893 User belongs to the following groups: (1, 2)
+2012-04-19 14:36:34,894 User has the following permissions: (u'admin', u'read')
+2012-04-19 14:36:34,894 no challenge required
+2012-04-19 14:36:34,894 -- repoze.who request ended (/images/menu-item-border.png) --
+2012-04-19 14:36:34,900 User belongs to the following groups: (1, 2)
+2012-04-19 14:36:34,900 User has the following permissions: (u'admin', u'read')
+2012-04-19 14:36:34,901 no challenge required
+2012-04-19 14:36:34,901 -- repoze.who request ended (/images/add.png) --
+2012-04-19 14:36:35,079 -- repoze.who request started (/images/delete.png) --
+2012-04-19 14:36:35,079 request classification: browser
+2012-04-19 14:36:35,079 identifier plugins registered [<turbotequila.lib.auth_plugin.CustomCommandLinePlugin object at 0x10c8d2910>, <CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:35,079 identifier plugins matched for classification "browser": [<CustomCookiePlugin 4488817808>]
+2012-04-19 14:36:35,079 identity returned from <CustomCookiePlugin 4488817808>: {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}
+2012-04-19 14:36:35,080 identities found: [(<CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'})]
+2012-04-19 14:36:35,080 authenticator plugins registered [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:35,080 authenticator plugins matched for classification "browser": [<CustomAuthPlugin 4505544912>]
+2012-04-19 14:36:35,080 userid preauthenticated by <CustomCookiePlugin 4488817808>: "yohan.jarosz@epfl.ch" (repoze.who.userid set)
+2012-04-19 14:36:35,080 identities authenticated: [((0, 0), None, <CustomCookiePlugin 4488817808>, {'tokens': ['G', 'D', 'V'], 'timestamp': 1334835977, 'repoze.who.userid': 'yohan.jarosz@epfl.ch', 'userdata': '1'}, 'yohan.jarosz@epfl.ch')]
+2012-04-19 14:36:35,090 User belongs to the following groups: (1, 2)
+2012-04-19 14:36:35,090 User has the following permissions: (u'admin', u'read')
+2012-04-19 14:36:35,091 no challenge required
+2012-04-19 14:36:35,091 -- repoze.who request ended (/images/delete.png) --

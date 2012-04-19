@@ -2,6 +2,7 @@
 """Setup the turbotequila application"""
 
 from turbotequila import model
+from turbotequila.lib import constants
 from sqlalchemy.exc import IntegrityError
 import transaction
 
@@ -15,47 +16,35 @@ def bootstrap(command, conf, vars):
     """Place any commands to setup turbotequila here.
     Note that you will have to log in the application one before launching the bootstrap."""
     try:
+        print 'Adding groups and permissions'
 
-        admin = model.DBSession.query(model.User).filter(model.User.email == 'your_email_on_tequila@your_university.ch').first()
+        # ADMIN GROUP
+        admins = model.Group()
+        admins.name = constants.group_admins_name
+        admins.id = constants.group_admins_id
+        model.DBSession.add(admins)
 
-        if admin:
-            print 'Adding ADMIN group and permission'
-            # ADMIN GROUP
-            admins = model.Group()
-            admins.name = group_admins
-            admins.users.append(admin)
-            model.DBSession.add(admins)
-        
-            # ADMIN PERMISSION
-            perm = model.Permission()
-            perm.name = perm_admin
-            perm.description = u'This permission give admin right to the bearer'
-            perm.groups.append(admins)
-            model.DBSession.add(perm)
-            transaction.commit()
-            
-        else :
-            print 'Adding USER group and permission'
-            # USER GROUP
-            users = model.Group()
-            users.name = group_users
-            model.DBSession.add(users)
-            # READ PERMISSION
-            read = model.Permission()
-            read.name = perm_user
-            read.description = u'This permission give "read" right to the bearer'
-            read.groups.append(users)
-            model.DBSession.add(read)
-            transaction.commit()
-            print '''
-                    
-                    Change email value in " turbotequila.websetup.bootstrap.py ".
-                    Launch " paster serve --reload development.ini ".
-                    Log in the application.
-                    Re-run "python setup-app development.ini". 
-                    It will gives you admin rights.
-                    
-                  '''
+        # ADMIN PERMISSION
+        perm = model.Permission()
+        perm.name = constants.permission_admin_name
+        perm.description = constants.permission_admin_desc
+        perm.groups.append(admins)
+        model.DBSession.add(perm)
+
+        # USER GROUP
+        users = model.Group()
+        users.name = constants.group_users_name
+        users.id = constants.group_users_id
+        model.DBSession.add(users)
+
+        # READ PERMISSION
+        read = model.Permission()
+        read.name = constants.permissions_read_name
+        read.description = constants.permission_read_desc
+        read.groups.append(users)
+        model.DBSession.add(read)
+        transaction.commit()
+
            
     except IntegrityError:
         print 'Warning, there was a problem adding your auth data, it may have already been added:'

@@ -12,6 +12,7 @@ from turbotequila.model import DBSession, User
 class UTable(TableBase):
     __model__ = User
     __omit_fields__ = ['_created']
+
     
 # TABLE FILLER
 class UTableFiller(TableFiller):
@@ -40,6 +41,8 @@ class UEditFiller(EditFormFiller):
 
 
 user_table = UTable(DBSession)
+print user_table
+
 user_table_filler = UTableFiller(DBSession)
 user_new_form = NewUForm(DBSession)
 user_edit_form = UEditForm()

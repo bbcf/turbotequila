@@ -6,5 +6,6 @@ from turbotequila.controllers.login import LoginController
 from turbotequila.controllers.group import GroupController
 from turbotequila.controllers.permission import PermissionController
 from turbotequila.controllers.user import UserController
+from turbotequila.controllers.admin import AdminController
 
 from turbotequila.controllers.root import RootController

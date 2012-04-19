@@ -10,7 +10,7 @@ from repoze.what.predicates import has_permission
 
 
 from turbotequila.controllers import ErrorController, LoginController, GroupController
-from turbotequila.controllers import PermissionController, UserController
+from turbotequila.controllers import PermissionController, UserController, AdminController
 
 
  
@@ -52,11 +52,12 @@ class RootController(BaseController):
     error = ErrorController()
     login = LoginController()
     
-    # admin controllers
+
     groups = GroupController(DBSession, menu_items=models)
     permissions = PermissionController(DBSession, menu_items=models)
     users = UserController(DBSession, menu_items=models)
-    
+
+    admin = AdminController()
 
 
     @expose('turbotequila.templates.index')
@@ -65,7 +66,7 @@ class RootController(BaseController):
     
     @expose('turbotequila.templates.index')
     def login_needed(self):
-        flash('You need to login')
+        flash('You need to login', 'error')
         return dict(page='index')
 
     @expose('turbotequila.templates.about')

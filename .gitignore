@@ -18,3 +18,4 @@
 .settings/
 /celerybeat_ctl
 /dev.ini
+/mydb.db
