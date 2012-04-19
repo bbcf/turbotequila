@@ -377,7 +377,7 @@ def request_classifier(environ):
     Returns one of the classifiers 'command_line' or 'browser',                                                                                                                                     
     depending on the imperative logic below
     '''
-    equest_method = REQUEST_METHOD(environ)
+    request_method = REQUEST_METHOD(environ)
     if request_method == 'POST':
         req = Request(environ)
         if not 'Cookie' in req.headers:
