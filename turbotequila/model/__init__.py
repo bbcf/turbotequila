@@ -61,4 +61,4 @@ def init_model(engine):
 # Import your model modules here.
 from turbotequila.model.auth import User, Group, Permission
 
-admin_models = ['User', 'Group', 'Permissions']
+admin_models = ['User', 'Group', 'Permission']

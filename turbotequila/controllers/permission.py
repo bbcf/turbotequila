@@ -5,8 +5,7 @@ from repoze.what.predicates import has_permission
 
 from tg import expose, flash
 from tg.controllers import redirect
-from tg import app_globals as gl
-
+from turbotequila.lib import constants
 from turbotequila.widgets.permission import perm_table, perm_table_filler, perm_new_form, perm_edit_filler, perm_edit_form
 from turbotequila.model import DBSession, Permission
 
@@ -24,10 +23,10 @@ class PermissionController(CrudRestController):
     def post_delete(self, *args, **kw):
         for id in args :
             permission = DBSession.query(Permission).filter(Permission.id == id).first()
-            if permission.name == gl.perm_admin:
-                flash('Cannot delete admin permission')
+            if permission.id == constants.permission_admin_name:
+                flash('Cannot delete admin permission', 'error')
                 redirect('/permissions')
-            if permission.name == gl.perm_user:
-                flash('Cannot delete read permission')
+            if permission.name == constants.permissions_read_name:
+                flash('Cannot delete read permission', 'error')
                 redirect('/permissions')
         return CrudRestController.post_delete(self, *args, **kw)

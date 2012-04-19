@@ -11,3 +11,8 @@ permission_admin_name = 'admin'
 permission_admin_desc = 'This permission give admin right to the bearer'
 permissions_read_name = 'read'
 permission_read_desc = 'This permission give "read" right to the bearer'
+
+
+REQUEST_TYPE = 'REQUEST_CLASSIFIER'
+REQUEST_TYPE_COMMAND_LINE = 'command_line'
+REQUEST_TYPE_BROWSER = 'browser'

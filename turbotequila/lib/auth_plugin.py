@@ -15,7 +15,7 @@ from webob import Request, Response
 from repoze.who.utils import resolveDotted
 from zope.interface import implements
 from turbotequila import handler
-
+from turbotequila.lib import constants
 
 from repoze.who.interfaces import IIdentifier, IChallenger, IAuthenticator, IRequestClassifier
 import zope.interface
@@ -279,6 +279,13 @@ class CustomCookiePlugin(object):
             res = Response()
             res.status = 302
             res.location = '/login_needed'
+            addon = None
+            if 'SCRIPT_NAME' in environ:
+                addon = environ['SCRIPT_NAME']
+            if addon is not None:
+                res.location = addon + '/login_needed'
+            else :
+                res.location = 'login_needed'
             return res
             
 
@@ -370,12 +377,15 @@ def request_classifier(environ):
     Returns one of the classifiers 'command_line' or 'browser',                                                                                                                                     
     depending on the imperative logic below
     '''
-    request_method = REQUEST_METHOD(environ)
+    equest_method = REQUEST_METHOD(environ)
     if request_method == 'POST':
         req = Request(environ)
         if not 'Cookie' in req.headers:
-            return 'command_line'
-    return 'browser'
+            environ[constants.REQUEST_TYPE] = constants.REQUEST_TYPE_COMMAND_LINE
+            return constants.REQUEST_TYPE_COMMAND_LINE
+    environ[constants.REQUEST_TYPE] = constants.REQUEST_TYPE_BROWSER
+    return constants.REQUEST_TYPE_BROWSER
+
 zope.interface.directlyProvides(request_classifier, IRequestClassifier)
 
 

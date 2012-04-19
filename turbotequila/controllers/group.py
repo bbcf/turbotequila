@@ -5,7 +5,7 @@ from repoze.what.predicates import has_permission
 from tg.controllers import redirect
 from turbotequila.widgets.group import group_table, group_table_filler, new_group_form, group_edit_filler, group_edit_form
 from turbotequila.model import DBSession, Group
-from tg import app_globals as gl
+from turbotequila.lib import constants
 __all__ = ['GroupController']
 
 
@@ -23,11 +23,11 @@ class GroupController(CrudRestController):
     def post_delete(self, *args, **kw):
         for id in args :
             group = DBSession.query(Group).filter(Group.id == id).first()
-            if group.name == gl.group_admins:
-                flash('Cannot delete admin group')
+            if group.id == constants.group_admins_id:
+                flash('Cannot delete admin group', 'error')
                 redirect('/groups')
-            if group.name == gl.group_users:
-                flash('Cannot delete users group')
+            if group.name == constants.group_users_id:
+                flash('Cannot delete users group', 'error')
                 redirect('/groups')
         return CrudRestController.post_delete(self, *args, **kw)
     
