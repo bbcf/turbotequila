@@ -8,7 +8,7 @@ Download the project :
 
     $ git clone git://github.com/bbcf/turbotequila.git.
 
-(It will create a directory named 'turbotequila')
+(It will create a directory named `turbotequila`)
 
 So you want to use another name for your project, like `myCoolProject`.
 
@@ -22,7 +22,7 @@ It will create an isolated environment for your project. (You may want to skip t
 
 Once your are in the right environment:
 
-    $ easy_install http://tg.gy/215 tg.devtools
+    $ easy_install -i http://tg.gy/215 tg.devtools
     $ python setup.py develop
     $ paster setup-app development.ini
     $ paster serve --reload development.ini

@@ -26,14 +26,13 @@ class InitProject(cmd.Cmd):
                 # replace occurence of 'turbotequila' in files
                 if f.endswith('.py'):
                     for line in fileinput.FileInput(os.path.join(root, f), inplace=1):
-                        line = line.replace('turbotequila', lower)
-
+                        print line.replace('turbotequila', lower)
 
                 # replace filenames with 'turbotequila'
                 f = f.replace('turbotequila', lower)
 
             # if path ends with 'turbotequila', replace it
-            if os.path.split(root)[1].endswith('turbotequila'):
+            if os.path.split(root)[1].count('turbotequila') >= 1:
                 tmp = self.rreplace(root, 'turbotequila', lower, 1)
                 shutil.move(root, tmp)
 
