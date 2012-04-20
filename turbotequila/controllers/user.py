@@ -5,7 +5,7 @@ from tgext.crud.decorators import registered_validate
 from repoze.what.predicates import not_anonymous, has_permission
 
 from tg import expose, flash, require
-from tg import app_globals as gl
+from turbotequila.lib import constants
 from tg.controllers import redirect
 from tg.decorators import paginate,with_trailing_slash
 
@@ -16,7 +16,7 @@ __all__ = ['UserController']
 
 
 class UserController(CrudRestController):
-    allow_only = has_permission(gl.perm_admin)
+    allow_only =has_permission(constants.permission_admin_name)
     model = User
     table = user_table
     table_filler = user_table_filler

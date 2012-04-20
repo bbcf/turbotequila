@@ -10,7 +10,7 @@ __all__ = ['GroupController']
 
 
 class GroupController(CrudRestController):
-    allow_only = has_permission(gl.perm_admin)
+    allow_only = has_permission(constants.permission_admin_name)
     model = Group
     table = group_table
     table_filler = group_table_filler

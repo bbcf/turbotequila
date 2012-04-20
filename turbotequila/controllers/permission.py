@@ -10,7 +10,7 @@ from turbotequila.widgets.permission import perm_table, perm_table_filler, perm_
 from turbotequila.model import DBSession, Permission
 
 class PermissionController(CrudRestController):
-    allow_only = has_permission(gl.perm_admin)
+    allow_only = has_permission(constants.permission_admin_name)
     model = Permission
     table = perm_table
     table_filler = perm_table_filler
