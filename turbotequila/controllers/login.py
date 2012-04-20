@@ -11,7 +11,6 @@ from turbotequila.config.app_cfg import token
 from paste.request import resolve_relative_url
 import transaction
 import datetime
-from tg import app_globals as gl
 import tg
 from turbotequila.lib import constants
 __all__ = ['LoginController']
@@ -58,7 +57,7 @@ class LoginController(BaseController):
         # log or create him
         user = DBSession.query(User).filter(User.email == tmp_user.email).first()
         if user is None:
-            user_group = DBSession.query(Group).filter(Group.name == gl.group_users).first()
+            user_group = DBSession.query(Group).filter(Group.id == constants.group_users_id).first()
             user_group.users.append(tmp_user)
             DBSession.add(tmp_user)
             DBSession.flush()
@@ -70,7 +69,7 @@ class LoginController(BaseController):
         elif user.name == constants.tmp_user_name:
             user.name = tmp_user.name
             user._set_date(datetime.datetime.now())
-            user_group = DBSession.query(Group).filter(Group.name == gl.group_users).first()
+            user_group = DBSession.query(Group).filter(Group.id == constants.group_users_id).first()
             user_group.users.append(tmp_user)
             flash( '''Your account has been created''')
             DBSession.add(user)
