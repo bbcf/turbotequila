@@ -10,55 +10,31 @@ Download the project :
 
 (It will create a directory named 'turbotequila')
 
-You want to use another one for your installation, so choose a name for your project (myCoolProject)
-and run the following commands :
-
-    $ find . -depth -name '*turbotequila*' -execdir rename turbotequila mycoolproject {} \;
-
-(will rename all files with 'turbotequila' by 'myCoolProject')
-
-then
-
-    $ find . -type 'f' -name '*' -exec sed -i 's/turbotequila/mycoolproject/' {} \;
-
-(will rename all occurances of 'turbotequila' in all files by 'myCoolProject')
-
-``WARNING`` : Avoid using upper case with naming your project. Just use lower case and it will be fine.
-
-In the future, we plan to avoid this by directly provide a plugin for Turbogears and a Tequila project will
-be created by a simple command like 'paster quickstart tequila'.
-
-
-Installation and Setup (example is given with a Fedora 15 (Lovelock))
-======================
-
-Install ``postgresql`` on your system::
-su -c 'yum install postgresql postgresql-server'
-see http://www.postgresql.org/docs/ for more.
-
-Install the ``dev packages`` for postgresql, and the ``python bindings``::
-    
-    $ su -c 'yum install postgresql-devel python-psycopg2'
-
-Create the database and change the adress in ``turbotequila/development.ini`` under ``sqlalchemy.url``.
-
-Install ``turbotequila`` using the setup.py script::
+So you want to use another name for your project, like `myCoolProject`.
 
     $ cd turbotequila
-    $ python setup.py install
+    $ python init_project.py myCoolProject
+    $ cd ..
+    $ cd myCoolProject
 
-Create the project database for any model classes defined::
+Now as you will work on a python environment I suggest you to use [virtualenv](http://example.net) and the [wrapper](http://www.doughellmann.com/projects/virtualenvwrapper).
+It will create an isolated environment for your project. (You may want to skip this step).
 
+Once your are in the right environment:
+
+    $ easy_install http://tg.gy/215 tg.devtools
+    $ python setup.py develop
     $ paster setup-app development.ini
-
-Follow the instructions given.
-
-While developing you may want the server to reload after changes in package files (or its dependencies) are saved. This can be achieved easily by adding the --reload option::
-
     $ paster serve --reload development.ini
 
-Then you are ready to go.
+These lines will:
+    - install the turbogears development tools
+    - install the libraries needed by turbotequila
+    - setup the database
+    - serve the application on localhost:8080 by default
 
+
+Enjoy ;)
 
 
  This code was written by the BBCF
