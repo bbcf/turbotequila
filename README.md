@@ -6,7 +6,7 @@ First use
 =====================
 Download the project :
 
-    $ git clone git://github.com/bbcf/turbotequila.git.
+    $ git clone git://github.com/bbcf/turbotequila.git
 
 (It will create a directory named `turbotequila`)
 
@@ -15,7 +15,7 @@ So you want to use another name for your project, like `myCoolProject`.
     $ cd turbotequila
     $ python init_project.py myCoolProject
     $ cd ..
-    $ cd myCoolProject
+    $ cd mycoolproject
 
 Now as you will work on a python environment I suggest you to use [virtualenv](http://example.net) and the [wrapper](http://www.doughellmann.com/projects/virtualenvwrapper).
 It will create an isolated environment for your project. (You may want to skip this step).
