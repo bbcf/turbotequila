@@ -29,11 +29,11 @@ Once your are in the right environment:
     $ paster serve --reload development.ini
 
 These lines will:
-    - install the turbogears development tools
-    - install the libraries needed by turbotequila
-    - setup the database
-    - move the authentication sample file to the right name (You MUST edit this file)
-    - serve the application on localhost:8080 by default
+    * install the turbogears development tools
+    * install the libraries needed by turbotequila
+    * setup the database
+    * move the authentication sample file to the right name (You MUST edit this file)
+    * serve the application on localhost:8080 by default
 
 
 Enjoy ;)
