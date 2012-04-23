@@ -29,6 +29,7 @@ Once your are in the right environment:
     $ paster serve --reload development.ini
 
 These lines will:
+    
     * install the turbogears development tools
     * install the libraries needed by turbotequila
     * setup the database
